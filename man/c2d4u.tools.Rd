@@ -33,11 +33,11 @@ install(pkg, ...)
 \item{pkg}{a package name. Note: Ubuntu packages typically have a "r-cran-" prefix.}
 }
 \value{
-\code{config} returns a set of CLI flags for apt.
+\code{config} - a set of CLI flags for apt.
 
 \code{update}, \code{show} and \code{find} - a conventional UNIX return code (0 for success), invisibly.
 
-\code{install} a logical for each file copied, invisibly (like \code{file.copy})
+\code{install} - a logical for each file copied, invisibly (like \code{file.copy})
 }
 \description{
 c2d4u is a repository of precompiled R packages for Ubuntu. Using it through

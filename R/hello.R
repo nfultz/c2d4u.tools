@@ -22,7 +22,7 @@ pkgname <- "c2d4u.tools"
 #' @param lists A directory to store apt listings.
 #' @param cache A directory to cache apt operations.
 #'
-#' @return \code{config} returns a set of CLI flags for apt.
+#' @return \code{config} - a set of CLI flags for apt.
 #'
 #' @rdname c2d4u.tools
 config <- function(sources.list, lists, cache) {
@@ -66,7 +66,7 @@ show <- function(pkg, ...) {
 }
 
 
-#' @return \code{install} a logical for each file copied, invisibly (like \code{file.copy})
+#' @return \code{install} - a logical for each file copied, invisibly (like \code{file.copy})
 #' @examples
 #'
 #' \dontrun{
