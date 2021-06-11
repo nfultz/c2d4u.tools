@@ -1,10 +1,10 @@
 Package: c2d4u.tools
 Type: Package
-Title: c2d4u - CRAN Packages Precompiled For Ubuntu
+Title: 'c2d4u' - CRAN Packages for 'Ubuntu'
 Version: 0.1.0
 Author: Neal Fultz
 Maintainer: Neal Fultz <nfultz@gmail.com>
-Description: The c2d4u PPA provides precompiled CRAN packages for Ubuntu users.
+Description: The 'c2d4u' project provides precompiled CRAN packages for 'Ubuntu' users.
     They can be installed into user libraries without requiring root permissions.
 License: GPL-3
 Encoding: UTF-8
