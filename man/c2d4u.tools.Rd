@@ -58,7 +58,8 @@ packages installed to the user library.
   # Only relevant to Ubuntu users
   c2d4u.tools::update()
   c2d4u.tools::find("randomizr")
-  c2d4u.tools::install("")
+  c2d4u.tools::show("r-cran-randomizr")
+  c2d4u.tools::install("r-cran-randomizr")
 }
 
 
