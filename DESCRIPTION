@@ -1,8 +1,8 @@
 Package: c2d4u.tools
 Type: Package
 Title: 'c2d4u' - CRAN Packages for 'Ubuntu'
-Version: 1.0
-Date: 2021-06-11
+Version: 1.2
+Date: 2021-06-16
 Author: Neal Fultz
 Maintainer: Neal Fultz <nfultz@gmail.com>
 Description: The 'c2d4u' project provides precompiled CRAN packages for 'Ubuntu' users.
