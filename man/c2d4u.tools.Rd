@@ -19,7 +19,7 @@ find(pkg, ...)
 
 show(pkg, ...)
 
-install(pkg, ...)
+install(pkg, ..., target = .libPaths()[1])
 }
 \arguments{
 \item{sources.list}{The debian \code{sources.list} file with the URL of the PPA.}
@@ -31,13 +31,15 @@ install(pkg, ...)
 \item{...}{options for \code{config}.}
 
 \item{pkg}{a package name. Note: Ubuntu packages typically have a "r-cran-" prefix.}
+
+\item{target}{the library to install in to.}
 }
 \value{
 \code{config} - a set of CLI flags for apt.
 
 \code{update}, \code{show} and \code{find} - a conventional UNIX return code (0 for success), invisibly.
 
-\code{install} - a logical for each file copied, invisibly (like \code{file.copy})
+\code{install} - a logical for each file copied, invisibly (like \code{file.copy}).
 }
 \description{
 c2d4u is a repository of precompiled R packages for Ubuntu. Using it through

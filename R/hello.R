@@ -45,8 +45,8 @@ config <- function(sources.list, lists, cache) {
 #' @return \code{update}, \code{show} and \code{find} - a conventional UNIX return code (0 for success), invisibly.
 #' @rdname c2d4u.tools
 update <- function(...) {
-  system2("apt-get", c(config(...), "update"))
 
+  system2("apt-get", c(config(...), "update"))
 
 }
 
@@ -66,7 +66,8 @@ show <- function(pkg, ...) {
 }
 
 
-#' @return \code{install} - a logical for each file copied, invisibly (like \code{file.copy})
+#' @param target the library to install in to.
+#' @return \code{install} - a logical for each file copied, invisibly (like \code{file.copy}).
 #' @examples
 #'
 #' \dontrun{
@@ -79,7 +80,7 @@ show <- function(pkg, ...) {
 #'
 #'
 #' @rdname c2d4u.tools
-install <- function(pkg, ...) {
+install <- function(pkg, ..., target=.libPaths()[1]) {
   olddir <- getwd()
   on.exit(setwd(olddir))
 
@@ -92,7 +93,7 @@ install <- function(pkg, ...) {
 
   deb <- dir(pattern="[.]deb$")[1]
 
-  message("extracting...")
+  message("extracting ", pkg, " to ", target, " ...")
 
   system2("ar", c("x", deb, "data.tar.xz"))
 
@@ -100,11 +101,11 @@ install <- function(pkg, ...) {
 
   setwd("usr/lib/R/site-library")
 
-  file.copy(
+  invisible(file.copy(
     ".",
-    file.path(system.file(package = pkgname), ".."),
+    target,
     recursive = TRUE
-  )
+  ))
 
 }
 
